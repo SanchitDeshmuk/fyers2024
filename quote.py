@@ -1,0 +1,14 @@
+from fyers_apiv3 import fyersModel
+
+client_id = 'GCEG4OMS1B-100'
+access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MzEwODQ5NjQsImV4cCI6MTczMTExMjIwNCwibmJmIjoxNzMxMDg0OTY0LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbkxrS2tLSWpDbDlCZmE2ZkhFemdCVGM4RzB3bndBczVVNnpSRkd2dWprc2puZUswX0NCSUg3YW9oT1Vwa1dwLWFtYlN0SXAzM3pfTVpvNFptYjJ6bG5DQnJpSFhJZ1BZOXB4STAtY1M5bENJaGZWaz0iLCJkaXNwbGF5X25hbWUiOiJTQU5DSElUIERFU0hNVUtIIiwib21zIjoiSzEiLCJoc21fa2V5IjoiMDEyNDMxNDY5OGRjZDY5YzMyZDQ3M2EzOTEyZDg2ZDhjYmJjYWIwZTFiZDNjZDNkNWZkY2ZmMTciLCJmeV9pZCI6IlhTMDg0MTUiLCJhcHBUeXBlIjoxMDAsInBvYV9mbGFnIjoiTiJ9.lFYsDNW4UydgLLoaIfyPT7P68MkaS9Nz5Z5MdvMmMTs"
+
+# Initialize the FyersModel instance with your client_id, access_token, and enable async mode
+fyers = fyersModel.FyersModel(client_id=client_id, token=access_token,is_async=False, log_path="")
+
+data = {
+    "symbols":"NSE:SBIN-EQ,NSE:IDEA-EQ"
+}
+
+response = fyers.quotes(data=data)
+print(response)

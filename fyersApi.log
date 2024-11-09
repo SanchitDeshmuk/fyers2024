@@ -1,0 +1,1 @@
+{"level":"ERROR","location":"[get_call:143] fyersModel","message":{"API":"/history","Error":{"code":-50,"data":{"range_to":"range_to cannot be 366 days greater than range_from for resolutions 1D"},"message":"Invalid input","s":"error"}},"timestamp":"2024-11-08 22:36:31,473+0530","service":"FyersAPI"}
